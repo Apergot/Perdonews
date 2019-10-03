@@ -24,7 +24,6 @@ export class Tab1Page implements OnInit{
   loadNews(event?){
     this.newsService.getTopHeadlines().
     subscribe( resp => {
-        console.log('noticias',resp.articles);
         if(resp.articles.length == 0){
           event.target.disabled = true;
           event.target.complete();
